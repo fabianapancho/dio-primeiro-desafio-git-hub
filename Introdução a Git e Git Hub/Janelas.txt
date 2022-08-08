@@ -1,0 +1,311 @@
+INSTALAÇÃO OPENJDK 17.0.4+8 Azul Zulu
+Entre no site oficial da Azul
+Faça o Download do arquivo .zip (Azul Zulu: 17.0.4+8 x86 64-bit)
+No seu Computador: Vá no Drive -> C://Arquivo de Programas
+Caso não tenha um diretório com o nome Java, chore
+Entre neste diretório e descompacte o download do zip JDK Azul Zulu 17.0.4+8 neste diretório
+Copie o caminho do diretório que você descompactou o zip JDK Azul Zulu 17.0.4+8
+Configuração do ambiente JAVA_HOME:
+Menu iniciar >> Editar as varáveis ​​de ambiente do sistema
+Irá abrir a janela Propriedades do Sistema, escolha a aba avançada, em seguida clique em variáveis ​​de ambiente
+Na janela Variáveis ​​de Ambiente, chore um novo Variáveis ​​do sistema
+Abrirá uma janela: Nova Variável de Sistema
+Nome da variável:JAVA_HOME
+Valor da variável: Cole o caminho do diretório que você descompactou ou zip JDK Azul Zulu 17.0.4+8 >> Ok
+Na mesma janela Variáveis ​​do Sistema, localize uma variável Path, selecione e clique na opção Editar...
+Clique na opção Novo e cole o mesmo caminho que você descompactou o JDK Azul Zulu 17.0.4+8 acrescentando\bin
+Continue com o Path selecionado e clique na opção Mover para Cima até chegar no topo
+Abra o Prompt de Comando: Menu iniciar >> cmd
+Executar:java --version
+Configuração e configurações iniciais finais!
+Créditos: DevSuperior
+
+INSTALAÇÃO GIT
+Entre no site oficial do GIT
+Escolha uma opção do Windows e o instalador será baixado automaticamente
+Manter como opções pré selecionadas
+Próximo
+Instalar
+Antes de finalizar a instalação, selecione a opção "Lauch Bash"
+No Git Bash, se o GIT está instalado:git --version
+Configurações iniciais:
+Configure o nome do usuário:git config --global user.name "Seu nome"
+Configure o endereço de e-mail (o mesmo do GitHub):git config --global user.email seu_email_do_GitHub@email.br
+Verificar como configurações:git config --list
+Configuração e configurações iniciais finais!
+GERAR TOKEN DE ACESSO
+Faça seu login no GitHub
+Gere um token de acesso : Seu perfil >> Configurações >> Configurações do desenvolvedor >> Tokens de acesso pessoal >> Gerar novo token
+Nota: Ecolha um nome para o token
+Expiração: Sem vencimento
+Selecione os escopos: Selecione todos os campos
+Gerar token
+Copie uma String referente ao token
+Aalve em um lugar seguro que você poderá consultar posteriormente
+Criação e configurações iniciais finais!
+GERAR CHAVE SSH
+Consulte a documentação oficial
+Verifique se existe alguma chave SSH em sua máquina:
+Sem Git Bash:ls -al ~/.ssh
+Se sim, para ser válido, o GitHub suporta qualquer um desses nomes de arquivos a seguir:
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+Caso não exista, gere uma chave SSH :
+Sem Git Bash:ssh-keygen -t ed25519 -C "seu_email_do_GitHub@example.com"
+Caso a opção acima não funcione :ssh-keygen -t rsa -b 4096 -C "seu_email_do_GitHub@example.com"
+pressione Enter
+pressione Enter
+pressione Enter
+adicione uma nova chave SSH na sua conta do GitHub :
+No Git Bash: Copie o conteúdo do arquivo id_ed25519.pub:clip < ~/.ssh/id_ed25519.pub
+Sem GitHub : Seu perfil >> Configurações >> Chaves SSH e GPG >> Nova chave SSH
+Cole o conteúdo da chave pública
+Teste uma conexão SSH:
+Sem Git Bash:ssh -T git@github.com
+yes
+Criação e configurações iniciais finais!
+INSTALAÇÃO INTELLIJ IDEA COMMUNITY
+Entre no site da Jetbrains
+Escolha a opção Comunidade e faça o Download
+Siga com Next
+Opções de instalação:
+lançador de 64 bits (caso seu sistema seja 64 bits, caso não, selecione 32 bits)
+Adicionar "Abrir pasta como projeto"
+.java - .groovy - .kt - .kts
+Adicionar lauchers dir ao PATH
+Próximo
+Instalar
+Para finalizar a instalação, escolha a opção Reebot mais tarde
+Configurações Iniciais:
+Aceite os termos: Confirmo que tenho... >> Confirmar
+Compartilhamento de dados >> Enviar estatísticas anônimas
+Configuração e configurações iniciais finais!
+CÓDIGO DE INSTALAÇÃO VISUAL STUDIO
+Entre no site do Visua Studio Code e faça o "Download for windows"
+o download Aguarde e execute o arquivo
+Instalar >> Próximo >> Próximo... Concluir
+o VS Code nas suas aplicações
+Configuração para desenvolvimento Java:
+Abrir o código Vs
+Abrir o menu de escolha + X (Ctrl + Shift)
+Cola o comando:vscode:extension/vscjava.vscode-java-pack
+Configuração e configurações iniciais finais!
+INSTALAÇÃO ECLIPSE IDE
+Entre no site oficial da Eclipse Foundation e faça o Download
+Executar o arquivo
+Escolha segunda opção: Eclipse IDE para Enterprise Java e Web Developers
+Clique na pasta da primeira opção (Java 17 + VM) e selecione o JDK instalado na sua máquina
+Manter como opções "criar entrada do menu iniciar" e "criar atalho na área de trabalho"
+Instalar
+Aceitar agora
+Lançar
+o Eclipse IDE nas suas aplicações
+Criação e configurações iniciais finais!
+🐧LINUX - UBUNTU
+INSTALAÇÃO OPENJDK 17
+Abra o terminal (Ctrl + Alt + t)
+Verifique se você tem o Java instalado: java --version
+Caso não, instale: sudo apt-get install openjdk-17-jdk
+Verifique se o Java realmente foi instalado e qual o caminho:
+java --version
+sudo update-alternatives --config java
+Copie e guarde o caminho de instalação do Java, no meu caso:/usr/lib/jvm/java-17-openjdk-amd64/bin/java
+Configure uma variável em ambiente JAVA_HOME:
+Abra o arquivo de configuração .bashrc. (Você usará o editor gedit):sudo gedit ~/.bashrc
+Copie o código abaixo e cole no final do arquivo .bashrc (Observe o caminho do JAVA_HOME):
+JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export JAVA_HOME
+export PATH=$PATH:$JAVA_HOME
+Salve o arquivo .bashrc
+Verifique se as configurações foram salvas:cat ~/.bashrc
+Feche o terminal e abra novamente
+Conferir mais uma vez se o Java está instalado
+Configuração e configurações iniciais finais!
+INSTALAÇÃO GIT
+Abra o terminal (Ctrl + Alt + t)
+Verifique se você tem o GIT instalado:git --version
+Caso não, instale:sudo apt-get install git-all
+Verifique se o GIT realmente foi instalado:git --version
+Configurações iniciais:
+Configure o nome do usuário:git config --global user.name "Seu nome"
+Configure o endereço de e-mail (o mesmo do GitHub):git config --global user.email seu_email_do_GitHub@email.br
+Conferir a lista de configurações:git config --list
+Configuração e configurações iniciais finais!
+GERAR TOKEN DE ACESSO
+Faça seu login no GitHub
+Gere um token de acesso : Seu perfil >> Configurações >> Configurações do desenvolvedor >> Tokens de acesso pessoal >> Gerar novo token
+Nota: Ecolha um nome para o token
+Expiração: Sem vencimento
+Selecione os escopos: Selecione todos os campos
+Gerar token
+Copie uma String referente ao token
+Aalve em um lugar seguro que você poderá consultar posteriormente
+Criação e configurações iniciais finais!
+GERAR CHAVE SSH
+Consulte a documentação oficial
+Verifique se existe alguma chave SSH em sua máquina:
+Sem terminais:ls -al ~/.ssh
+Se sim, para ser válido, o GitHub suporta qualquer um desses nomes de arquivos a seguir:
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+Caso não exista, gere uma chave SSH :
+Sem terminais:ssh-keygen -t ed25519 -C "seu_email_do_GitHub@example.com"
+Caso a opção acima não funcione :ssh-keygen -t rsa -b 4096 -C "seu_email_do_GitHub@example.com"
+pressione Enter
+pressione Enter
+pressione Enter
+adicione uma nova chave SSH na sua conta do GitHub :
+Abra o arquivo que contém uma chave SSH pública que você acabou de gerar:cat ~/.ssh/id_ed25519.pub
+Agora, copie o conteúdo do arquivo id_ed25519.pub que está sendo exibido no terminal
+Sem GitHub : Seu perfil >> Configurações >> Chaves SSH e GPG >> Nova chave SSH
+Cole o conteúdo da chave pública
+Teste uma conexão SSH:
+Sem terminais:ssh -T git@github.com
+yes
+Criação e configurações iniciais finais!
+INSTALAÇÃO INTELLIJ IDEA COMMUNITY
+Mostrar aplicativos >> Software Ubuntu >> Explorar >> Comunidade Intellij IDEA >> Instalar
+Entre no site da Jetbrains
+Escolha a opção Comunidade e faça o Download
+Descompacte uma massa
+Sem Terminal (Ctrl + Alt + T):
+Entre na massa descompactada:cd Downloads/IdealC
+Entre na massa bin:cd bin
+Execute o arquivo de instalação idea.sh:./idea.sh
+Configurações Iniciais:
+Aceite os termos: Confirmo que tenho... >> Confirmar
+Compartilhamento de dados >> Enviar estatísticas anônimas
+Configuração e configurações iniciais finais!
+CÓDIGO DE INSTALAÇÃO VISUAL STUDIO
+Mostrar aplicativos >> Software Ubuntu >> Explorar >> Código do Visual Studio >> Instalar
+Entre no site oficial do Visual Studio Code
+Faça o DOWNLOAD do arquivo com a extensão .deb
+Escolha a opção Abrir com: Instalação do software (padrão)
+o código VS nas suas aplicações
+Configuração para desenvolvimento Java:
+Abrir o código Vs
+Abrir o menu de escolha + X (Ctrl + Shift)
+Cola o comando:vscode:extension/vscjava.vscode-java-pack
+Configuração e configurações iniciais finais!
+INSTALAÇÃO ECLIPSE IDE
+Mostrar aplicativos >> Software Ubuntu >> Explorar >> Eclipse >> Instalar
+Entre no site oficial da Eclipse Foundation e faça o Download
+Descompacte uma massa
+Procure o arquivo "eclipse-inst" e execute
+Escolha segunda opção: Eclipse IDE para Enterprise Java e Web Developers
+Clique na pasta da primeira opção e selecione o JDK instalado na sua máquina
+Manter como opções "criar entrada do menu iniciar" e "criar atalho na área de trabalho"
+Instalar
+Aceitar agora
+Lançar
+o Eclipse IDE nas suas aplicações
+Configuração e configurações iniciais finais!
+🍎Mac OS
+INSTALAÇÃO OPENJDK 17.0.4+8 Azul Zulu
+Abra o terminal
+Verifique se você tem o Java instalado: java --version
+Entre no site oficial da Azul
+Faça o Download do arquivo .dmg (Azul Zulu: 17.0.4+8 x86 64-bit)
+Execute o arquivo: Next >> Next >> ... >> Finish
+Verifique se o Java realmente foi instalado:java --version
+Configure uma variável em ambiente JAVA_HOME:
+Sem Terminal: cd /Library/Java/JavaVirtualMachines
+Crie o arquivo bash_profile (Você usará o editor nano):nano ~/ .bash_profile
+Copie o código a seguir e cole no final do arquivo .bash_profile (Observe o caminho do JAVA_HOME): JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-.jdk/Contents/Home
+Salve o arquivo .bash_profile
+Aplicando o caminho da variável:source ~/.bash_profile
+Verifique o caminho da variável JAVA_HOME:echo $JAVA_HOME
+Configuração e configurações iniciais finais!
+INSTALAÇÃO GIT
+Abra o terminal (Ctrl + Alt + t)
+Verifique se você tem o GIT instalado:git --version
+Caso não, instale através do Homebrew :
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git
+Verifique se o GIT realmente foi instalado:git --version
+Configurações iniciais:
+Configure o nome do usuário:git config --global user.name "Seu nome"
+Configure o endereço de e-mail (o mesmo do GitHub):git config --global user.email seu_email_do_GitHub@email.br
+Conferir a lista de configurações:git config --list
+Configuração e configurações iniciais finais!
+GERAR TOKEN DE ACESSO
+Faça seu login no GitHub
+Gere um token de acesso : Seu perfil >> Configurações >> Configurações do desenvolvedor >> Tokens de acesso pessoal >> Gerar novo token
+Nota: Ecolha um nome para o token
+Expiração: Sem vencimento
+Selecione os escopos: Selecione todos os campos
+Gerar token
+Copie uma String referente ao token
+Aalve em um lugar seguro que você poderá consultar posteriormente
+Criação e configurações iniciais finais!
+GERAR CHAVE SSH
+Consulte a documentação oficial
+Verifique se existe alguma chave SSH em sua máquina:
+Sem Terminal:ls -al ~/.ssh
+Se sim, para ser válido, o GitHub suporta qualquer um desses nomes de arquivos a seguir:
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+Caso não exista, gere uma chave SSH :
+Sem Terminal:ssh-keygen -t ed25519 -C "seu_email_do_GitHub@example.com"
+Caso a opção acima não funcione :ssh-keygen -t rsa -b 4096 -C "seu_email_do_GitHub@example.com"
+pressione Enter
+pressione Enter
+pressione Enter
+adicione uma nova chave SSH na sua conta do GitHub :
+No Terminal: Copie o conteúdo do arquivo id_ed25519.pub:pbcopy < ~/.ssh/id_ed25519.pub
+Sem GitHub : Seu perfil >> Configurações >> Chaves SSH e GPG >> Nova chave SSH
+Cole o conteúdo da chave pública
+Teste uma conexão SSH:
+Sem Terminal:ssh -T git@github.com
+yes
+Criação e configurações iniciais finais!
+INSTALAÇÃO INTELLIJ IDEA COMMUNITY
+Entre no site da Jetbrains
+Escolha a opção Comunidade e faça o Download
+Siga com Next
+Opções de instalação:
+lançador de 64 bits (caso seu sistema seja 64 bits, caso não, selecione 32 bits)
+Adicionar "Abrir pasta como projeto"
+.java - .groovy - .kt - .kts
+Adicionar lauchers dir ao PATH
+Próximo
+Instalar
+Para finalizar a instalação, escolha a opção Reebot mais tarde
+Configurações Iniciais:
+Aceite os termos: Confirmo que tenho... >> Confirmar
+Compartilhamento de dados >> Enviar estatísticas anônimas
+Configuração e configurações iniciais finais!
+CÓDIGO DE INSTALAÇÃO VISUAL STUDIO
+Entre no site do Visua Studio Code e faça o "Download for macOs"
+o download Aguarde e execute o arquivo
+Instalar >> Próximo >> Próximo... Concluir
+o VS Code nas suas aplicações
+Configuração para desenvolvimento Java:
+Abrir o código Vs
+Abrir o menu de escolha + X (Ctrl + Shift)
+Cola o comando:vscode:extension/vscjava.vscode-java-pack
+Configuração e configurações iniciais finais!
+INSTALAÇÃO ECLIPSE IDE
+Entre no site oficial da Eclipse Foundation e faça o Download
+Executar o arquivo
+Escolha segunda opção: Eclipse IDE para Enterprise Java e Web Developers
+Clique na pasta da primeira opção (Java 17 + VM) e selecione o JDK instalado na sua máquina
+Manter como opções "criar entrada do menu iniciar" e "criar atalho na área de trabalho"
+Instalar
+Aceitar agora
+Lançar
+o Eclipse IDE nas suas aplicações
+Criação e configurações iniciais finais!
+🤝Contribuindo
+Este empresário foi criado para fins de estudo então contribua com ele. Se te ajudar de alguma forma, ficarei feliz em saber. E caso você conheça alguém que se identifica com o conteúdo, deixe de compatilhar.
+
+Se possível:
+
+⭐️ Estrela do projeto
+
+🐛Encontrar e relatar problemas
+
+Disponibilizado com♥por cami-la .
