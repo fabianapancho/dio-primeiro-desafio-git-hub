@@ -1,0 +1,5 @@
+Estudos sobre Git
+
+Videos - Professor Guanabara: https://www.youtube.com/watch?v=xEKo29OWILE
+
+O git Bash é um terminal extendido para otimizar o uso do Git. 
