@@ -1,5 +1,5 @@
-# Repositório do Desafio do Projeto sobre Git/Github
-Desafio Git/Github
+# Desafio do Projeto sobre Git/Github
+Repositório criado para o Desafio do Projeto Git/Github.
 
-##Links Uteis 
+## Links Uteis 
 [Sintaxe Basica Markdow](https://www.markdownguide.org/basic-syntax/!)
